@@ -72,7 +72,7 @@
         </header>
         
         <div id="box" class="animated fadeIn">
-            <div class="plofile">
+            <div class="plofile plo_php">
                 <div class="text">
                     <h2>Taro(たろ)</h2>
                     <p>愛知県在住<br>
@@ -109,7 +109,7 @@
                         echo " 誠に申し訳ございませんが、再度お問い合わせをお願いいたします。";
                     };
                     ?>
-                <div class="pageback"><a href="about.html"><span>About&times;Contact</span>へ戻る</a></div>
+                <div class="pageback"><a href="about.html">&gt;<span>About&times;Contact</span>へ戻る</a></div>
                 
                 </div>
             </div>

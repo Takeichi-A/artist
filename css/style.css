@@ -401,7 +401,7 @@ a {
     margin: 50px auto;
     padding: 30px; } }
 @media (max-width: 595px) {
-  .plofile {
+  .plo_php {
     display: none; }
 
   .contact .echo {
