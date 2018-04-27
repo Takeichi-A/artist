@@ -572,9 +572,38 @@ a{
 /*php---------------------------------------------------------------------------------phpここから-------*/
 .contact{
     .echo{
+        width: 70%;
+        margin-top: 30%;
+        margin-left: 20%;
+        margin-right: 10%;
         font-size: 1.4rem;
         line-height: 1.8;
         background: rgba(241, 241, 241, 0.8);
         padding: 10px;
     }//echo
 }//contact
+
+@media(max-width: 959px){
+    .contact{
+        .echo{
+            width: 80%;
+            margin: auto;
+            font-size: 1.4rem;
+            line-height: 1.8;
+            background: rgba(241, 241, 241, 0.8);
+            padding: 10px;
+        }//echo
+    }//contact
+}//959
+
+@media(max-width: 595px){
+    .contact{
+        .echo{
+            width: 90%;
+            font-size: 1.4rem;
+            line-height: 1.8;
+            background: rgba(241, 241, 241, 0.8);
+            padding: 10px;
+        }//echo
+    }//contact
+}//595
