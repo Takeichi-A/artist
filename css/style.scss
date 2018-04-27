@@ -1,0 +1,577 @@
+@import "compass";
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+$baseFontFamily: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+$fontColor: #696969;
+$titleFont: 'Amatic SC', cursive;
+
+/* Base ------------------------------------------------------------------------------*/
+
+html{ font-size: 62.5% };
+
+body{
+    font-size: 1.2rem;
+    line-height: 1.4;
+    letter-spacing: 0.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* header ----------------------------------------------------------------------------*/
+
+
+/* indexページ -------------------------------------------------------------------------ここから--------*/
+#main{
+    position: relative;
+    #top-img{
+        position: relative;
+        width: 100%;
+        z-index: 1;
+        img{
+            width: 50%;
+            height: 1500px;
+            object-fit: cover;
+            z-index: 1;
+        }//img
+        
+        .left{
+           top: 0;
+            right: 50%;
+            object-position: 100% 0;
+        }//left
+        
+        .right{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            object-position: 0 0;
+        }//right
+        
+    }//#top-img
+
+    .enter-link{
+            z-index: 100;
+            position: absolute;
+            top: 40%;
+            width: 100%;
+                p{
+                    width: 100%;
+                    text-align: center;
+                    font-size: 60px;
+                    color: white;
+                    font-weight: bold;
+                }//p
+    }//enter-link
+    
+    .content{
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 50%;
+        margin: auto;
+        background: url(../images/top/inner_pc.png) no-repeat center center;
+        background-size: contain;
+        text-align: center;
+    }//content
+    
+}//#main
+
+@media(max-width: 959px){
+    #main{
+        #top-img{
+            img{
+                height: 1200px;
+            }//img
+        }//#top-img
+    
+        .enter-link{
+                top: 35%;
+        }//enter-link
+        
+        .content{
+            top: -130px;
+            width: 90%;
+            background: url(../images/top/inner_sp.png) no-repeat center center;
+            background-size: contain;
+        }//content
+    }//#main
+}//959px
+
+@media(max-width: 599px){
+    #main{
+        #top-img{
+        img{
+            height: 800px;
+        }//img
+        
+        .left{
+            position: absolute;
+            top: -100px;
+        }//left
+        
+        .right{
+            top: -100px;
+        }//right
+        
+    }//#top-img
+    
+        .enter-link{
+                top: 200px;
+                img{
+                    width: 50%;
+                }//img
+        }//enter-link
+        
+        .content{
+            top: 500px;
+            width: 100%;
+            height: 500px;
+        }//content
+    }//#main
+}//599px
+
+
+
+/* gallery ----------------------------------------------------------------------------galleryここから--------*/
+
+/* header----------------------------------------------------*/
+#header_in{
+    width: 80%;
+    height: 70px;
+    margin: auto;
+    @include display-flex;
+    h1{
+        margin-top: 10px 0;
+        img{
+            height: 40px;
+        }//img
+    }//h1
+    
+    .insta{
+        margin-left: auto;
+        box-sizing: border-box;
+        padding-top: 26px;
+        padding-right: 30px;
+        a{
+            color: #000;
+            i{
+                font-size: 3.0rem;
+            }//i
+        }//a
+    }//insta
+    
+    .about{
+        box-sizing: border-box;
+        padding-top: 20px;
+        a{
+            font-family: $titleFont;
+            color: #000;
+            font-size: 2.8rem;
+            font-weight: bold;
+        }//a
+    }//about
+}//#header_in
+
+@media(max-width: 959px){
+    #header_in{
+    width: 90%;
+    }//#header_in
+}//959px
+
+@media(max-width: 599px){
+    #header_in{
+        width: 95%;
+        height: 50px;
+        h1{
+            img{
+                height: 30px;
+            }//img
+        }//h1
+        
+        .insta{
+            padding-top: 20px;
+            padding-right: 10px;
+            a{
+                i{
+                    font-size: 2.5rem;
+                }//i
+            }//a
+        }//insta
+        
+        .about{
+            a{
+                font-size: 1.8rem;
+            }//a
+        }//about
+    }//#header_in
+}//599
+    
+
+
+
+/*container----------------------------------------------------*/
+#container{
+    @include display-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .item{
+        width: 400px;
+        height: 400px;
+        a{
+            outline: none;
+            img{
+                width: 400px;
+                height: 400px;
+                object-fit: cover;
+            }//img
+        }//a
+    }//item
+}//#container
+
+@media(max-width: 959px){
+    #container{
+        .item{
+            width: 350px;
+            height: 350px;
+            img{
+                width: 350px;
+                height: 350px;
+            }//img
+        }//item
+    }//#container
+}//959
+
+@media(max-width: 599px){
+   #container{
+       flex-direction: column;
+        .item{
+            width: 100%;
+            height: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+            }//img
+        }//item
+    }//#container
+}//599
+
+
+/*pagetop----------------------------------------------------*/
+.pagetop{
+    display: none;
+    position: fixed;
+    margin: 0;
+    bottom: 0;
+    width: 60px;
+    height: 60px;
+    background: #555;
+    @include border-radius(50% 50% 0 0);
+    right: 20px;
+    text-align: center;
+    cursor: pointer;
+        a{
+            font-size: 3.0rem;
+            color: white;
+            position: fixed;
+            bottom: 10px;
+            right: 38px;
+        }//a
+}//pagetop
+
+@media(max-width: 599px){
+   .pagetop{
+    width: 40px;
+    height: 40px;
+        a{
+            font-size: 2.0rem;
+            bottom: 5px;
+            right: 32px;
+        }//a
+    }//pagetop
+}//599
+
+/*copy---------------------------------------------------------------------*/
+.copy{
+    text-align: center;
+    margin-top: 60px;
+}//copy
+
+@media(max-width: 599px){
+   .copy{
+        font-size: 1.0rem;
+    }//copy
+}//599
+
+
+/* aboutページ-----------------------------------------------------------aboutここから----------*/
+/*bg-----------------------------------------------------------------------*/
+#bg{
+    .bg_sp{
+        display: none;
+    }//bg_sp
+    position: fixed;
+    z-index: -10;
+    width: 100%;
+    height: 1500px;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }//img
+}//bg
+
+@media(max-width: 959px){
+    #bg{
+        .bg_pc{
+            display:none;
+        }//bg_pc
+        .bg_sp{
+            display: block;
+        }//bg_sp
+        height: auto;
+        img{
+            height: auto;
+        }//img
+    }//bg
+}//959
+
+@media(max-width: 599px){
+    #bg{
+        .bg_pc{
+            display:none;
+        }//bg_pc
+        .bg_sp{
+            display: block;
+        }//bg_sp
+        height: 700px;
+        img{
+            height: 100%;
+        }//img
+    }//bg
+}//599
+
+
+/* header----------------------------------------------------*/
+#ab_header_in{
+    width: 80%;
+    height: 70px;
+    margin: auto;
+    @include display-flex;
+    h1{
+        margin-top: 10px 0;
+        img{
+            height: 40px;
+        }//img
+    }//h1
+    
+    .insta{
+        margin-left: auto;
+        box-sizing: border-box;
+        padding-top: 26px;
+        padding-right: 30px;
+        a{
+            color: white;
+            i{
+                font-size: 3.0rem;
+            }//i
+        }//a
+    }//insta
+    
+    .about{
+        box-sizing: border-box;
+        padding-top: 20px;
+        a{
+            font-family: $titleFont;
+            color: white;
+            font-size: 2.8rem;
+            font-weight: bold;
+        }//a
+    }//about
+}//#ab_header_in
+
+@media(max-width: 959px){
+    #ab_header_in{
+    width: 90%;
+    }//#ab_header_in
+}//959px
+
+@media(max-width: 599px){
+    #ab_header_in{
+        width: 95%;
+        height: 50px;
+        h1{
+            img{
+                height: 30px;
+            }//img
+        }//h1
+        
+        .insta{
+            padding-top: 20px;
+            padding-right: 10px;
+            a{
+                i{
+                    font-size: 2.5rem;
+                }//i
+            }//a
+        }//insta
+        
+        .about{
+            a{
+                font-size: 1.8rem;
+            }//a
+        }//about
+    }//#ab_header_in
+}//599
+
+/*box-----------------------------------------------------------------------*/
+#box{
+    @include display-flex;
+    z-index: 100;
+    position: relative;
+    .plofile{
+        @include flex(1);
+        .text{
+            width: 70%;
+            background: rgba(241, 241, 241, 0.8);
+            margin-top: 35%;
+            margin-left: 10%;
+            padding: 30px;
+            h2{
+                margin-top: 0;
+            }//h2
+            p{
+                font-size: 1.4rem;
+                letter-spacing: 0.4;
+                line-height: 1.8;
+                margin: 0;
+            }//p
+            .title{
+                font-size: 1.6rem;
+                text-transform: uppercase;
+                color: $fontColor;
+                margin-top: 15px;
+                margin-bottom: 5px;
+            }//title
+        }//text
+    }//plofile
+    
+    .contact{
+        @include flex(1);
+        form{
+            width: 70%;
+            margin-top: 30%;
+            margin-left: 20%;
+            margin-right: 10%;
+            h3{
+                font-family: $titleFont;
+                font-size: 3.0rem;
+            }//h3
+            p{
+                font-size: 1.4rem;
+            }//p
+            input{
+                width: 70%; 
+                height: 25px;
+                font-size: 1.4rem;
+                border: none;
+                background: rgba(241, 241, 241, 0.9);
+            }//input
+            textarea{
+                width: 90%;
+                height: 100px;
+                font-size: 1.4rem;
+                border: none;
+                background: rgba(241, 241, 241, 0.9);
+            }//textarea
+            .fr_text{
+                width: 90%;
+                text-align: right;
+            }//fr_text
+            .btn{
+                width: 90%;
+                text-align: right;
+                button{
+                    padding: 10px 20px;
+                    font-size: 1.6rem;
+                    background: rgba(241, 241, 241, 0.9);
+                }//button
+            }//btn
+            
+        }//form
+    }//comtact
+}//#box
+
+
+@media(max-width: 959px){
+    #box{
+        @include display-flex;
+        @include flex-direction(column);
+        .plofile{
+            margin-top: 15%;
+            .text{
+                margin: auto;
+            }//text
+        }//plofile
+        
+        .contact{
+            @include flex(1);
+            form{
+                width: 80%;
+                margin: auto;
+                textarea{
+                    width: 100%;
+                }//textarea
+                .fr_text{
+                    width: 100%;
+                }//fr_text
+                .btn{
+                    width: 100%;
+                }//btn
+                
+            }//form
+        }//comtact
+    }//#box
+}//959px
+
+
+@media(max-width: 599px){
+    #box{
+        @include display-flex;
+        .plofile{
+            .text{
+                width: 80%;
+                padding: 15px;
+            }//text
+        }//plofile
+        
+        .contact{
+            @include flex(1);
+            form{
+                width: 90%;
+                .fr_text{
+                    text-align: left;
+                }//fr_text
+                .btn{
+                    text-align: center;
+                    button{
+                        width: 100%;
+                    }//button
+                }//btn
+                
+            }//form
+        }//comtact
+    }//#box
+}//599px
+
+/*php---------------------------------------------------------------------------------phpここから-------*/
+.echo{
+    font-size: 1.4rem;
+    line-height: 1.8;
+}//echo
