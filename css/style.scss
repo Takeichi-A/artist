@@ -148,7 +148,7 @@ a{
     margin: auto;
     @include display-flex;
     h1{
-        margin-top: 10px 0;
+        margin-top: 10px;
         img{
             height: 40px;
         }//img
@@ -365,7 +365,7 @@ a{
     margin: auto;
     @include display-flex;
     h1{
-        margin-top: 10px 0;
+        margin-top: 10px;
         img{
             height: 40px;
         }//img
@@ -448,7 +448,6 @@ a{
             }//h2
             p{
                 font-size: 1.4rem;
-                letter-spacing: 0.4;
                 line-height: 1.8;
                 margin: 0;
             }//p
@@ -571,7 +570,11 @@ a{
 }//599px
 
 /*php---------------------------------------------------------------------------------phpここから-------*/
-.echo{
-    font-size: 1.4rem;
-    line-height: 1.8;
-}//echo
+.contact{
+    .echo{
+        font-size: 1.4rem;
+        line-height: 1.8;
+        background: rgba(241, 241, 241, 0.8);
+        padding: 10px;
+    }//echo
+}//contact
