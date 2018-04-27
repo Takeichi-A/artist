@@ -408,11 +408,15 @@ a {
     width: 80%;
     padding: 15px; }
   .contact .pageback {
+    display: block;
     padding: 30px 20px;
-    margin-left: auto;
+    text-align: right;
     font-size: 1.4rem; }
-    .contact .pageback span {
-      font-family: "Amatic SC", cursive;
-      font-weight: bold; } }
+    .contact .pageback a {
+      color: black; }
+      .contact .pageback a span {
+        font-family: "Amatic SC", cursive;
+        font-size: 1.6rem;
+        font-weight: bold; } }
 
 /*# sourceMappingURL=style.css.map */

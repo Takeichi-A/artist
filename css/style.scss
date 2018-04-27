@@ -606,13 +606,18 @@ a{
             padding: 15px;
         }//echo
         .pageback{
+            display: block;
             padding: 30px 20px;
-            margin-left: auto;
+            text-align: right;
             font-size: 1.4rem;
-            span{
-                font-family: $titleFont;
-                font-weight: bold;
-            }//span
+            a{
+                color: black;
+                span{
+                    font-family: $titleFont;
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                }//span
+            }//a
         }//pageback
     }//contact
 }//595
