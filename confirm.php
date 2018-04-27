@@ -109,24 +109,19 @@
                         echo " 誠に申し訳ございませんが、再度お問い合わせをお願いいたします。";
                     };
                     ?>
-            
+                <div class="pageback"><a href="about.html"><span>About&times;Contact</span>へ戻る</a></div>
+                
                 </div>
             </div>
+            
         </div>
         
         <p class="copy">copyright (c) Taro all rights reserved.</p>
         
         <div>
-            <p class="pagetop"><a herf="#header_in">&and;</a></p>
+            <p class="pagetop"><a href="#header_in">&and;</a></p>
         </div>
-        
 
-
-    
-    
-    <div id="pagetop">
-        <a href="#head_in"><img src="images/top_sp/pagetop.png" alt="" srcset="images/top_sp/pagetop@2x.png 2x" /></a>
-    </div>
 
     </body>
 </html>
